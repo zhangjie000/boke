@@ -2,7 +2,7 @@
 $headerHeight: 145px;
 /*头部 start*/
 .header {
-  width: 1000px;
+
   margin: 0 auto;
   height: $headerHeight;
   background-color: #3399cc;
@@ -12,15 +12,22 @@ $headerHeight: 145px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
   .headerLogo {
     line-height: $headerHeight;
-
+    text-align: center;
   }
   .headerWord {
     padding-right:0px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "宋体";
+    padding: 0px;
     padding-top: 40px;
+
+    p:first-of-type{
+      animation: headeranimation 3s ease-out 1s backwards;
+    }
     p:last-child {
       padding-left: 2em;
+      animation:headeranimation  3s ease-out 4s backwards;
+
     }
     img {
       margin-top: 25px;
@@ -28,6 +35,23 @@ $headerHeight: 145px;
       height: 80px;
       float: right;
     }
+  }
+}
+
+/*第一段文字动画*/
+@keyframes headeranimation {
+  0% {
+    transform: translate(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(30px);
+    opacity: .5;
+  }
+
+  100% {
+    transform: translate(60px);
+    opacity: 1;
   }
 }
 

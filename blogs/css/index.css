@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*头部 start*/
 .header {
-  width: 1000px;
   margin: 0 auto;
   height: 145px;
   background-color: #3399cc;
@@ -9,20 +8,36 @@
   border-radius: 10px;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5); }
   .header .headerLogo {
-    line-height: 145px; }
+    line-height: 145px;
+    text-align: center; }
   .header .headerWord {
     padding-right: 0px;
     font-size: 16px;
     font-family: "宋体";
+    padding: 0px;
     padding-top: 40px; }
+    .header .headerWord p:first-of-type {
+      animation: headeranimation 3s ease-out 1s backwards; }
     .header .headerWord p:last-child {
-      padding-left: 1em; }
+      padding-left: 2em;
+      animation: headeranimation  3s ease-out 4s backwards; }
     .header .headerWord img {
       margin-top: 25px;
       width: 80px;
       height: 80px;
       float: right; }
 
+/*第一段文字动画*/
+@keyframes headeranimation {
+  0% {
+    transform: translate(0);
+    opacity: 0; }
+  50% {
+    transform: translate(30px);
+    opacity: .5; }
+  100% {
+    transform: translate(60px);
+    opacity: 1; } }
 /*头部 end*/
 
 /*# sourceMappingURL=index.css.map */
