@@ -15,3 +15,24 @@ body{
     padding:0px;
 }
 
+
+/*boostrap样式修改 start*/
+.container{
+    padding: 0;
+
+}
+
+ .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #99CCCC;
+}
+
+.nav-pills > li + li {
+    margin-left: 0px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #39c;
+}
+/*boostrap样式修改 end*/

@@ -1,36 +1,41 @@
 @charset "UTF-8";
 $headerHeight: 145px;
+$fontFamily:"楷体";
+$boxShadow:0px 1px 6px rgba(0, 0, 0, 0.5);
 /*头部 start*/
 .header {
-
   margin: 0 auto;
   height: $headerHeight;
   background-color: #3399cc;
   color: #fff;
-
   border-radius: 10px;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: $boxShadow;
   .headerLogo {
     line-height: $headerHeight;
     text-align: center;
+    img{
+      max-width: 100%;
+      max-height:100%;
+    }
   }
   .headerWord {
     padding-right:0px;
     font-size: 16px;
-    font-family: "宋体";
+    font-family:$fontFamily;
     padding: 0px;
     padding-top: 40px;
 
     p:first-of-type{
-      animation: headeranimation 3s ease-out 1s backwards;
+      animation: headeranimation 2s ease-out 1s backwards;
     }
     p:last-child {
       padding-left: 2em;
-      animation:headeranimation  3s ease-out 4s backwards;
+      animation:headeranimation  2s ease-out 3s backwards;
 
     }
     img {
       margin-top: 25px;
+      margin-right: 15px;
       width: 80px;
       height: 80px;
       float: right;
@@ -38,7 +43,7 @@ $headerHeight: 145px;
   }
 }
 
-/*第一段文字动画*/
+/*文字动画*/
 @keyframes headeranimation {
   0% {
     transform: translate(0);
@@ -54,5 +59,30 @@ $headerHeight: 145px;
     opacity: 1;
   }
 }
+/*文字动画*/
 
 /*头部 end*/
+
+/*导航 start*/
+.navMarginTop10{
+  margin-top: 10px;
+  .row{
+    margin: 0 auto;
+    .nav{
+      background-color: #FFCCCC;
+      border-radius: 5px;
+      box-shadow:$boxShadow;
+
+      li{
+        padding: 0px ;
+        text-align: center;
+        a{
+          color: #000;
+          font-size: 16px;
+          font-family:$fontFamily;
+        }
+      }
+    }
+  }
+}
+/*导航 end*/
