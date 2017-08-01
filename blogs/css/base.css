@@ -8,23 +8,34 @@
 /*样式初始化*/
 body{
     background-color: #efefef;
+    font-family: "楷体";
 }
 
 *{
     margin:0px;
     padding:0px;
+    font-family: "楷体";
+
 }
 
 
+a{
+    font-family: "楷体";
+    color: #000;
+}
+
+a:hover ,a:link ,a:active{
+    text-decoration: none;
+}
 /*boostrap样式修改 start*/
 .container{
     padding: 0;
 
 }
 
- .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #fff;
-    background-color: #99CCCC;
+    background-color: #39c;
 }
 
 .nav-pills > li + li {
